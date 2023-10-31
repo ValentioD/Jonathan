@@ -1,0 +1,296 @@
+body,
+h1,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+header {
+    background-size: cover;
+    background-color: #2f5d62ff;
+    padding: 30px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    margin-right: 20px;
+    padding-left: 50px;
+}
+
+.typing-text {
+    white-space: pre;
+    overflow: scroll;
+    animation: typing 5s steps(40, end);
+}
+
+@keyframes typing {
+    to {
+        width: 100%;
+    }
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    justify-content: flex-end;
+    margin-top: 45px;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding-right: 20px;
+}
+
+
+nav a:hover {
+    color: #5e8b7eff;
+    transition: color 0.3s ease;
+    transform: scale(1.1);
+}
+
+
+main {
+    padding: 20px 0;
+    color: #ffffff;
+    background-color: #2f5d62ff;
+}
+
+#quote {
+    margin: 70px 0px 450px 0px;
+}
+
+.character {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    text-align: center;
+}
+
+.character img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.character p {
+    flex: 1;
+    font-size: 18px;
+}
+
+footer {
+    background-color: #ffffff;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    width: 80px;
+    height: auto;
+}
+
+.footer-text {
+    font-size: 14px;
+}
+
+.footer-text a:hover {
+    transition: color 0.3s ease;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color: #ffff00;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:first-child {
+    margin-right: 20px;
+}
+
+.footer-logo img {
+    width: 80px;
+    height: auto;
+}
+
+.events {
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.events h2 {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.event {
+    display: flex;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    align-items: center;
+    color: #5e8b7eff;
+}
+
+.event img {
+    max-width: 500px;
+    height: auto;
+    margin: 50px 200px 50px 50px;
+}
+
+
+.event p {
+    font-size: 16px;
+    flex: 1;
+    text-align: left;
+}
+
+.event2 {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    align-items: center;
+    color: #5e8b7eff;
+}
+
+.event2 img {
+    max-width: 500px;
+    height: auto;
+    margin: 50px 50px 50px 200px;
+}
+
+.event2 p {
+    font-size: 16px;
+    flex: 1;
+    text-align: right;
+}
+
+.nav-container {
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+}
+
+
+.tekst-box {
+    width: 50%;
+    border: 1px solid #000;
+    padding: 20px;
+    text-align: center;
+}
+
+.tekst {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.featured-character,
+.signup-form {
+    text-align: center;
+    word-spacing: 10px;
+    padding: 100px 0px 100px 0px;
+    margin: 0px 0px 225px 0px;
+}
+
+.buttonToTop a {
+    background-color: #a7c4bcff;
+    border-radius: 50px;
+    padding: 1vh 1vw;
+    position: fixed;
+    right: 2vw;
+    bottom: 3vh;
+    text-decoration: none;
+}
+
+.buttonToTop a:hover {
+    background-color: #5e8b7eff;
+    transition: color 0.3s ease;
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        overflow-x:hidden;
+    }
+
+    .event{
+        flex-direction: column;
+    }
+
+    .event2{
+        flex-direction: column;
+    }
+
+    #quote {
+        margin: 70px 0px 300px 0px;
+    }
+
+    .event img {
+        max-width: 100vw;
+        margin: 50px 50px 50px 50px;
+    } 
+
+    .event2 img {
+        max-width: 100vw;
+        margin: 50px 50px 50px 50px;
+    }
+
+    .buttonToTop a {
+        display: none;
+    }
+}

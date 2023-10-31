@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <script>
+        window.addEventListener('scroll', function () {
+            var scrollingText = document.getElementById('scrollingText');
+            var scrollY = window.scrollY || window.pageYOffset;
+
+            if (scrollY > 50) { // Verander dit getal naar de gewenste scrollpositie waarop de tekst moet verdwijnen
+                scrollingText.style.display = 'none';
+            } else {
+                scrollingText.style.display = 'block'; // Toon de tekst als de gebruiker terug omhoog scrollt
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <section class="header-container">
+        <div class="logo">
+            <img src="images/logo.png" alt="logo">
+        </div>
+        <div class="nav-container">
+            <nav>
+                <a href="#">Home</a>
+                <a href="#Jonathan">Jonathan</a>
+                <a href="#Upload">Upload</a>
+            </nav>
+        </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="featured-character" id="characters">
+            <div class="container">
+                <h3 id="quote">"From paper to pixels, our robot brings your paper words to the web's stage, where
+                    stories come to
+                    life."</p>
+                    <h2 id="Jonathan">Jonathan</h2>
+
+                    <a href="https://en.wikipedia.org/wiki/Hello_Kitty" target="_blank">
+                        <img src="images/Robot.png" alt="Robot">
+                    </a>
+            </div>
+        </section>
+    </main>
+
+    <section class="events" id="events">
+        <div class="container">
+            <section class="event">
+                <img src="images/proces.jpg" alt="proces">
+                <p>"We started from scratch as a group, facing challenges and learning along the way."
+                </p>
+            </section>
+            <section class="event2">
+                <img src="images/presentatie.jpg" alt="img">
+                <p>"Now, we've successfully completed our
+                    project. Our shared commitment and teamwork have transformed our vision into a tangible reality.
+                    We've achieved our
+                    goal."
+                </p>
+            </section>
+        </div>
+    </section>
+
+    <section class="tekst" id="Upload">
+        <button id="generateReportButton">Scan paper</button>
+        <div class="tekst-box" id="reportBox"></div>
+        <script>
+            document.getElementById('generateReportButton').addEventListener('click', function () {
+                generateReport();
+            });
+
+            function generateReport() {
+                const reportContent = `Naam: Pieter Bas
+Klas: 4e klas
+Vak: Geschiedenis
+Datum: 26/10/2023
+
+Onderwerp: De Impact van de Franse Revolutie
+
+Inleiding:
+De Franse Revolutie, die plaatsvond van 1789 tot 1799, was een keerpunt in de wereldgeschiedenis. Het was
+een periode van radicale veranderingen in Frankrijk en had aanzienlijke gevolgen voor Europa en de rest van
+de wereld. Dit verslag onderzoekt de belangrijkste gevolgen van de Franse Revolutie op politiek,
+maatschappij en cultuur.
+
+Politieke Impact:
+Een van de belangrijkste politieke gevolgen van de Franse Revolutie was de omverwerping van het koningschap
+en de opkomst van de Eerste Franse Republiek. Dit markeerde het einde van eeuwenoude monarchieën en
+bevorderde de verspreiding van republikeinse ideeën in Europa.
+
+Maatschappelijke Impact:
+De Franse Revolutie bracht fundamentele sociale veranderingen met zich mee. Het idee van gelijkheid voor de
+wet begon terrein te winnen, wat leidde tot de afschaffing van privileges van adel en geestelijkheid. Dit
+opende de deur naar meer gelijkheid in de samenleving.
+
+Culturele Impact:
+De Franse Revolutie stimuleerde het ontstaan van nieuwe ideeën en kunstvormen. Kunst en literatuur werden
+beïnvloed door revolutionaire geestdrift, en er ontstonden politieke en maatschappelijke discussies in de
+kunstwereld.
+
+Conclusie:
+De Franse Revolutie vormde een keerpunt in de wereldgeschiedenis, waarbij politieke, maatschappelijke en
+culturele veranderingen werden geïnitieerd. De gevolgen ervan kunnen nog steeds worden waargenomen in
+moderne samenlevingen en politieke systemen.
+
+Dit verslag biedt slechts een beknopt overzicht van de impact van de Franse Revolutie. De gebeurtenissen en
+ideeën die hieruit voortkwamen, hebben de wereld blijvend veranderd en verdienen aandacht in elke studie van
+de geschiedenis.`;
+
+                const generateReportButton = document.getElementById('generateReportButton');
+                generateReportButton.textContent = 'Scanning...';
+                generateReportButton.disabled = true;
+
+                const reportBox = document.getElementById('reportBox');
+                reportBox.innerHTML = '<div class="typing-text"></div>';
+                const typingText = reportBox.querySelector('.typing-text');
+                setTimeout(function () {
+                    typingText.textContent = reportContent;
+                    generateReportButton.textContent = 'Generate Report';
+                    generateReportButton.disabled = false;
+                }, 5000); // Na 5 seconden de tekst volledig weergeven
+            }
+        </script>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <section class="footer-logo">
+                    <img src="images/logo.png" alt="logo">
+                </section>
+                <section class="footer-text">
+                    <p>&copy; 2023 Sanrio. All rights reserved.</p>
+                </section>
+            </div>
+            <section class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Cookie policy</a>
+                <a href="#contact">Contact</a>
+            </section>
+        </div>
+        <section class="buttonToTop">
+            <a href="#top">☝️</a>
+        </section>
+    </footer>
+</body>
+
+</html>
